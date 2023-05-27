@@ -360,12 +360,15 @@ section img {
   }
 
   .navbar {
-    height: 50px;
+    height: 60px;
   }
   .navbar .navbar-container {
     padding: 2%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
   }
 
   .navbar .content-logo ul {
