@@ -43,6 +43,7 @@
   height: 80px;
   padding: 4px 1rem 4px 1rem;
   position: fixed;
+  background-color: var(--colorWhite);
   display: flex;
   align-items: center;
 }
@@ -151,4 +152,42 @@
 .navbar .content-user ul li .fas {
   font-size: 1.5rem;
   color: var(--colorGrayDark);
+}
+
+/* estilos contenedor main */
+
+.container {
+  padding-top: 80px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 236px);
+  grid-template-rows: auto;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+.container > section {
+  padding: 0;
+  margin: 15px 10px;
+  border-radius: 20px;
+}
+
+.container > section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.container > .card-xs {
+  grid-row-end: span 26;
+}
+
+.container > .card-xm {
+  grid-row-end: span 33;
+}
+
+.container > .card-xl {
+  grid-row-end: span 40;
 }
