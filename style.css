@@ -36,6 +36,11 @@
   font-family: "pinterest1";
 } */
 
+body {
+  width: 100%;
+  height: 100%;
+}
+
 /* styles navbar */
 
 .navbar {
@@ -46,6 +51,7 @@
   background-color: var(--colorWhite);
   display: flex;
   align-items: center;
+  z-index: 9;
 }
 
 .navbar-container {
@@ -154,40 +160,107 @@
   color: var(--colorGrayDark);
 }
 
+.navbar .content-user .user .avatar img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
 /* estilos contenedor main */
 
-.container {
+/* .container {
   padding-top: 80px;
   width: 100%;
-  height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 236px);
+  grid-template-columns: repeat(auto-fill, 250px);
   grid-template-rows: auto;
   justify-content: center;
-  column-gap: 15px;
-}
 
-.container > section {
+  column-gap: 10px;
+  row-gap: 10px;
+} */
+
+/* .container > section {
+  width: 100%;
+
+  position: relative;
   padding: 0;
-  margin: 15px 10px;
-  border-radius: 20px;
-}
+  display: flex;
+  justify-content: center;
 
-.container > section img {
+  border-radius: 20px;
+
+} */
+
+/* .container > section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  z-index: 1;
 }
 
-.container > .card-xs {
+.container > section .color {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #11111188;
+  opacity: 0;
+} */
+/* 
+.container > section .color:hover {
+  opacity: 1;
+  z-index: 3;
+  color: white;
+}
+*/
+
+.container > .card-verysmall {
   grid-row-end: span 26;
 }
 
-.container > .card-xm {
+.container > .card-small {
   grid-row-end: span 33;
 }
-
-.container > .card-xl {
+.container > .card-medium {
   grid-row-end: span 40;
+}
+
+.container {
+  background-color: var(--colorWhite);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 236px);
+  grid-template-rows: auto-fill;
+  /* align-items: start; */
+  /* column-count: 5; */
+
+  /* column-gap: 5px;
+  row-gap: 5px; */
+  margin: 0 auto;
+  grid-gap: 10px;
+  row-gap: 10px;
+  /* max-width: 756px; */
+  width: 100%;
+  height: 100%;
+  padding: 80px;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* width: 236px; */
+  width: 100%;
+}
+
+section img {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  cursor: zoom-in;
+  border-radius: 16px;
+  object-fit: cover;
 }
